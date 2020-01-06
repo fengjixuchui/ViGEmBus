@@ -1,19 +1,27 @@
 /*
 * Virtual Gamepad Emulation Framework - Windows kernel-mode bus driver
-* Copyright (C) 2016-2018  Benjamin Höglinger-Stelzer
 *
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
+* MIT License
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
+* Copyright (c) 2016-2019 Nefarius Software Solutions e.U. and Contributors
 *
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
 */
 
 
@@ -24,18 +32,10 @@
 // TODO: that statement might be obsolete, further testing required
 // 
 
-// {70211B0E-0AFB-47DB-AFC1-410BF842497A}
-// ReSharper disable once CppMissingIncludeGuard
-DEFINE_GUID(GUID_DEVINTERFACE_XUSB_UNKNOWN_0,
-    0x70211B0E, 0x0AFB, 0x47DB, 0xAF, 0xC1, 0x41, 0x0B, 0xF8, 0x42, 0x49, 0x7A);
-
-// {B38290E5-3CD0-4F9D-9937-F5FE2B44D47A}
-DEFINE_GUID(GUID_DEVINTERFACE_XUSB_UNKNOWN_1,
-    0xB38290E5, 0x3CD0, 0x4F9D, 0x99, 0x37, 0xF5, 0xFE, 0x2B, 0x44, 0xD4, 0x7A);
-
-// {2AEB0243-6A6E-486B-82FC-D815F6B97006}
-DEFINE_GUID(GUID_DEVINTERFACE_XUSB_UNKNOWN_2,
-    0x2AEB0243, 0x6A6E, 0x486B, 0x82, 0xFC, 0xD8, 0x15, 0xF6, 0xB9, 0x70, 0x06);
+// Below these interfaces are from wdmguid.h being used as dummies
+// {70211B0E-0AFB-47DB-AFC1-410BF842497A} PNP_LOCATION_INTERFACE
+// {B38290E5-3CD0-4F9D-9937-F5FE2B44D47A} D3COLD_SUPPORT_INTERFACE
+// {2AEB0243-6A6E-486B-82FC-D815F6B97006} REENUMERATE_SELF_INTERFACE_STANDARD
 
 #pragma once
 
