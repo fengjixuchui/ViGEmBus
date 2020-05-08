@@ -25,6 +25,9 @@
     <Inf Include="ViGEmBus.inf">
       <Filter>Driver Files</Filter>
     </Inf>
+    <Inf Include="ViGEmBus_SingleArch.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="busenum.h">
@@ -48,9 +51,6 @@
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Xgip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ByteArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -63,6 +63,9 @@
     <ClInclude Include="..\client\include\ViGEm\km\BusShared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="busenum.c">
@@ -72,9 +75,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="xusb.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xgip.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Queue.c">
@@ -95,5 +95,10 @@
     <ClCompile Include="ByteArray.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ViGEmBus.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

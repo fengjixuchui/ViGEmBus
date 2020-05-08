@@ -175,6 +175,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Inf Include="ViGEmBus.inf" />
+    <Inf Include="ViGEmBus_SingleArch.inf" />
   </ItemGroup>
   <ItemGroup>
     <FilesToPackage Include="$(TargetPath)" />
@@ -191,7 +192,6 @@
     <ClInclude Include="trace.h" />
     <ClInclude Include="UsbPdo.h" />
     <ClInclude Include="Util.h" />
-    <ClInclude Include="Xgip.h" />
     <ClInclude Include="Xusb.h" />
   </ItemGroup>
   <ItemGroup>
@@ -206,7 +206,6 @@
     <ClCompile Include="Queue.c" />
     <ClCompile Include="UsbPdo.c" />
     <ClCompile Include="Util.c" />
-    <ClCompile Include="xgip.c" />
     <ClCompile Include="xusb.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

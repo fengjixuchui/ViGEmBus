@@ -2,11 +2,18 @@
 
 Windows kernel-mode driver emulating well-known USB game controllers.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/rv74ufluwib52dq2?svg=true)](https://ci.appveyor.com/project/nefarius/vigembus) [![Discord](https://img.shields.io/discord/346756263763378176.svg)](https://discord.vigem.org) [![Website](https://img.shields.io/website-up-down-green-red/https/vigem.org.svg?label=ViGEm.org)](https://vigem.org/) [![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](<https://paypal.me/NefariusMaximus>) [![Support on Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](<https://www.patreon.com/nefarius>) [![GitHub followers](https://img.shields.io/github/followers/nefarius.svg?style=social&label=Follow)](https://github.com/nefarius) [![Twitter Follow](https://img.shields.io/twitter/follow/nefariusmaximus.svg?style=social&label=Follow)](https://twitter.com/nefariusmaximus)
+[![Build status](https://ci.appveyor.com/api/projects/status/rv74ufluwib52dq2?svg=true)](https://ci.appveyor.com/project/nefarius/vigembus) [![Discord](https://img.shields.io/discord/346756263763378176.svg)](https://discord.vigem.org) [![Website](https://img.shields.io/website-up-down-green-red/https/vigem.org.svg?label=ViGEm.org)](https://vigem.org/) [![GitHub followers](https://img.shields.io/github/followers/nefarius.svg?style=social&label=Follow)](https://github.com/nefarius) [![Twitter Follow](https://img.shields.io/twitter/follow/nefariusmaximus.svg?style=social&label=Follow)](https://twitter.com/nefariusmaximus)
+
+<sub>(This project is available under a free and permissive license, but needs financial support to sustain its continued improvements. In addition to maintenance and stability there are many desirable features yet to be added. If your company is using components of ViGEm, please consider reaching out.)</sub>
+
+Businesses: support continued development via invoiced technical support, maintenance, sponsoring contracts:
+<br>&nbsp;&nbsp;_E-mail: vigem @ nefarius dot at_
+
+Individuals: support continued maintenance and development via [PayPal](https://paypal.me/NefariusMaximus) donations.
+
+----
 
 ## About
-
-**Disclaimer:** this project is for software developers. To make it do something useful you'll also need a [feeder application](<https://docs.vigem.org/#!vigem-feeder.md>).  
 
 The `ViGEmBus` driver and `ViGEmClient` libraries represent the core of the Virtual Gamepad Emulation Framework (or `ViGEm` , for short). `ViGEm` aims for a 100% accurate [emulation](<https://en.wikipedia.org/wiki/Emulator>) of well-known gaming peripherals as pure software-based devices at kernel level. As it mimics "the real thing" games and other processes require no additional modification whatsoever to detect `ViGEm`-based devices (no Proxy-DLLs or API-Hooking) and simply work out of the box. While the (now obsolete) [Scarlett.Crush Productions Virtual Bus Driver](<https://github.com/nefarius/ScpVBus>) is the spiritual father of this project, `ViGEm` has been designed and written from the ground up utilizing Microsoft's [Kernel-Mode Driver Framework](https://en.wikipedia.org/wiki/Kernel-Mode_Driver_Framework).
 
@@ -34,17 +41,9 @@ The driver is built for Windows 7/8.1/10 (x86 and amd64).
 
 ## How to build
 
-### Prerequisites
+[Install Visual Studio 2019 and WDK for Windows 10, version 1903](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#wdk-for-windows-10-version-1903).
 
-- Visual Studio **2017** ([Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15) is just fine)
-- [WDK for Windows 10, version 1803](https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit)
-- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) (or greater, required for building only)
-
-You can either build directly within Visual Studio or in PowerShell by running the build script:
-
-```PowerShell
-.\build.ps1 -configuration release
-```
+You can build directly within Visual Studio.
 
 Do bear in mind that you'll need to **sign** the driver to use it without [test mode](<https://technet.microsoft.com/en-us/ff553484(v=vs.96)>).
 
@@ -54,7 +53,7 @@ Do bear in mind that you'll need to **sign** the driver to use it without [test 
 
 Found a bug and want it fixed? Open a detailed issue on the [GitHub issue tracker](../../issues)!
 
-Have an idea for a new feature? [Check out the project board](https://projects.vigem.org/public/board/27281599595f5fbe5f915884fb9ca2de92726e74173f1ac434300b2d40af), maybe it's already on there! If not, let's have a chat about your request on [Discord](https://discord.vigem.org) or the [community forums](https://forums.vigem.org).
+Have an idea for a new feature? Let's have a chat about your request on [Discord](https://discord.vigem.org) or the [community forums](https://forums.vigem.org).
 
 ### Questions & Support
 
@@ -77,7 +76,9 @@ Sponsors listed here have helped the project flourish by either financial suppor
 
 ## Known users of ViGEm
 
-A brief listing of projects/companies/vendors known to build upon the powers of ViGEm. This list is non-exhaustive, if you'd like to see your project included, contact us!
+A brief listing of projects/companies/vendors known to build upon the powers of ViGEm.
+
+This list is non-exhaustive, if you'd like to see your project included, contact us!
 
 - [3dRudder](https://www.3drudder.com/)
 - [Parsec](https://parsecgaming.com/)
@@ -91,3 +92,8 @@ A brief listing of projects/companies/vendors known to build upon the powers of 
 - [HP](https://www8.hp.com/us/en/campaigns/gamingpcs/overview.html)
 - [DS4Windows](https://ryochan7.github.io/ds4windows-site/)
 - [XOutput](https://github.com/csutorasa/XOutput)
+- [RdpGamepad](https://github.com/microsoft/RdpGamepad)
+
+## License
+
+The `ViGEm` Bus Driver is licensed under the MIT License, see [LICENSE](./LICENSE.md) for more information.
