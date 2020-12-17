@@ -37,15 +37,30 @@ A few examples of the most common use cases for `ViGEm` are:
 
 ## Supported Systems
 
+### Version 1.16 and below
+
 The driver is built for Windows 7/8.1/10 (x86 and amd64).
+
+### Version 1.17 and above
+
+The driver is built for Windows 10 only (x86 and amd64).
+
+## License
+
+The ViGEm Bus Driver is licensed under the **BSD-3-Clause**, see [LICENSE](./LICENSE.md) for more information.
 
 ## How to build
 
-[Install Visual Studio 2019 and WDK for Windows 10, version 1903](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#wdk-for-windows-10-version-1903).
+### Prerequisites
+
+- [Step 1: Install Visual Studio 2019](<https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#download-icon-step-1-install-visual-studio-2019>)
+- [Step 2: Install WDK for Windows 10, version 2004](<https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#download-icon-step-2-install-wdk-for-windows-10-version-2004>)
+- [Step 3: Clone the Driver Module Framework (DMF)](https://github.com/microsoft/DMF) into the same parent directory.
+  - Build the `DmfK` project with Release and Debug configurations for all architectures (x64 and Win32).
 
 You can build directly within Visual Studio.
 
-Do bear in mind that you'll need to **sign** the driver to use it without [test mode](<https://technet.microsoft.com/en-us/ff553484(v=vs.96)>).
+Do bear in mind that you'll need to **sign** the driver to use it without [test mode](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option#enable-or-disable-use-of-test-signed-code).
 
 ## Contribute
 
@@ -61,7 +76,7 @@ Please respect that the GitHub issue tracker isn't a helpdesk. We offer a [Disco
 
 ## Installation
 
-To grab the latest signed binaries for use or redistribution [head over to releases](../../releases/latest) and download the latest setup. It will take care of everything.
+Pre-built production-signed binaries are provided by `Nefarius Software Solutions e.U.` and [available as an all-in-one setup](../../releases/latest).
 
 ## Sponsors
 
@@ -93,7 +108,7 @@ This list is non-exhaustive, if you'd like to see your project included, contact
 - [DS4Windows](https://ryochan7.github.io/ds4windows-site/)
 - [XOutput](https://github.com/csutorasa/XOutput)
 - [RdpGamepad](https://github.com/microsoft/RdpGamepad)
-
-## License
-
-The `ViGEm` Bus Driver is licensed under the MIT License, see [LICENSE](./LICENSE.md) for more information.
+- [Touchmote](https://github.com/Ryochan7/Touchmote/tree/ryochan7)
+- [Mi-ViGEm](https://github.com/grayver/mi-vigem)
+- [BetterJoy](https://github.com/Davidobot/BetterJoy)
+- [Regame - Cloud Gaming Engine](https://github.com/ksyun-kenc/liuguang)
